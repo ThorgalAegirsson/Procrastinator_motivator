@@ -1,38 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <title>Procrastinator Motivator</title>
-</head>
-<body>
-    <h1>Hey procrastinators! Let's motivate you!</h1>
-    <h2></h2>
-    <form>
-        <fieldset>
-            <legend>How much time did you waste in your life? Let's find out!</legend>
-            What year were you born? <select name="year" id="year"></select> <br>
-            Gender: <select name="gender" id="gender">
-                <option value="man" selected>male</option>
-                <option value="woman">female</option>
-                <option value="idiot">progressive</option>
-            </select> <span class="asterisk">*</span> <br>
-            <button class="submit">Motivate me!</button>
-        </fieldset>
-    </form>
-    <hr>
-    <div class="chartWrapper">
-        <p>Your estimated lifetime is: <span class="lifetime"></span>. Statistically you still have <span class="lifeLeft"></span> left. Every box below is a week, black box is the past, white box is your future. Use it wisely.</p>
-        <div class="chart"></div>
-    </div>
-    <hr>
-    TEMPORARY FOR API EXPLORATION: <br>
-    <div class="output"></div>
 
-<hr>
-* - for an incomplete list of what progressive encompasses go <a href="https://ageofshitlords.com/list-of-all-tumblr-genders-so-far">HERE</a>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <title>Procrastinator Motivator</title>
+    </head>
+
+    <body>
+        <h1>Hey procrastinators! Let's motivate you!</h1>
+        <h2></h2>
+        <form>
+            <fieldset>
+                <legend>How much time did you waste in your life? Let's find out!</legend>
+                <div class="inside">
+
+                    What year were you born? <select name="year" id="year"></select> <br>
+                    Gender: <select name="gender" id="gender">
+                        <option value="man" selected>male</option>
+                        <option value="woman">female</option>
+                        <option value="idiot">progressive</option>
+                    </select>
+                    <br>
+                    <button class="submit">Motivate me!</button>
+                </div>
+            </fieldset>
+        </form>
+        <hr>
+        <div class="chartWrapper invisible">
+            <p>Your estimated lifetime is: <span class="lifetime"></span>. Statistically you still have <span class="lifeLeft"></span>
+                left. <br> Every box below is a week, black box is the past, light box is your future. Use it wisely.</p>
+            <div class="chart"></div>
+        </div>
+        <hr>
+
+        <footer>
+            <hr>
+            Data: <a href="https://www.worldbank.org" target="_blank">World Bank</a> <br>
+            Source code: <a href="https://github.com/ThorgalAegirsson/Procrastinator_motivator" target="_blank">Github</a><br>
+            2018 &copy; Cudowny Radus
+        </footer>
+
+        <div class="modal">
+            <h1>ERROR ERROR ERROR</h1> 
+            <!-- blinking -->
+            Nature doesn't give a crap about your progressive first-world problems, you spoiled brat. From now on you are a woman.
+            
+            <button>Ok, now I get it</button>
+            <br>
+            PS. If you are interested in this modern day bullshit you can check out an incomplete list of what "progressive" gender encompasses - go <a href="https://ageofshitlords.com/list-of-all-tumblr-genders-so-far" target="_blank">HERE</a>
+        </div>
+    </body>
+
 </html>

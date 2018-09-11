@@ -10,13 +10,13 @@
     };
 
     const drawChart = (lifetime, timePassed) => {
+        console.log('drawChart started');
         const chartDiv = document.querySelector('div.chart');
         chartDiv.innerHTML = '';
         const weeks = Math.round(lifetime * 52);
         const pastWeeks = Math.round(timePassed * 52);
         console.log(`weeks: ${weeks}`);
         for (let i = 0; i < weeks; i++){
-            
             const weekDiv = document.createElement('div');
             weekDiv.classList.add('weekDiv');
             if (i < pastWeeks) weekDiv.classList.add('passed');
@@ -26,7 +26,10 @@
     };
 
     const readData = (year, gender) => {
+        console.log('readData started');
         //values
+        const outputDiv = document.querySelector('.chartWrapper');
+        // if (outputDiv.classList.contains('invisible')) outputDiv.classList.remove('invisible');
         let yearVal = year.options[year.selectedIndex].value;
         let genderVal = gender.options[gender.selectedIndex].value;
         console.log(yearVal);
@@ -56,7 +59,7 @@
             console.log(json);
             const life = json[1][0].value;
             
-            output.textContent = JSON.stringify(json);
+            // output.textContent = JSON.stringify(json);
             
             lifetime.textContent = formatTime(life);
             const today = new Date().getFullYear();
@@ -84,6 +87,7 @@
 
         startBtn.addEventListener('click', (e) => {
             e.preventDefault();
+            document.querySelector('.chartWrapper').classList.remove('invisible');
             readData(year, gender);
             
         });
