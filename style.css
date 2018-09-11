@@ -1,0 +1,16 @@
+.weekDiv {
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    background: white;
+}
+.passed {
+    background: black;
+}
+.chart {
+    border: 1px solid green;
+    padding: 5px;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(auto-fill, 10px);
+}
