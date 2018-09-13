@@ -11,34 +11,33 @@
     </head>
 
     <body>
-        <h1>Hey procrastinators! Let's motivate you!</h1>
-        <h2></h2>
-        <form>
-            <fieldset>
-                <legend>How much time did you waste in your life? Let's find out!</legend>
-                <div class="inside">
+        <div class="wrapper">
+            <h1>Hey procrastinators! Let's motivate you!</h1>
+            <form>
+                <fieldset>
+                    <legend>How much time did you waste in your life? Let's find out!</legend>
+                    <div class="inside">
 
-                    What year were you born? <select name="year" id="year"></select> <br>
-                    Gender: <select name="gender" id="gender">
-                        <option value="man" selected>male</option>
-                        <option value="woman">female</option>
-                        <option value="idiot">progressive</option>
-                    </select>
-                    <br>
-                    <button class="submit">Motivate me!</button>
-                </div>
-            </fieldset>
-        </form>
-        <hr>
-        <div class="chartWrapper invisible">
-            <p>Your estimated lifetime is: <span class="lifetime"></span>. Statistically you still have <span class="lifeLeft"></span>
-                left. <br> Every box below is a week, black box is the past, light box is your future. Use it wisely.</p>
-            <div class="chart"></div>
+                        What year were you born? <select name="year" id="year"></select> <br>
+                        Gender: <select name="gender" id="gender">
+                            <option value="man" selected>male</option>
+                            <option value="woman">female</option>
+                            <option value="idiot">progressive</option>
+                        </select>
+                        <br>
+                        <button class="submit">Motivate me!</button>
+                    </div>
+                </fieldset>
+            </form>
+            <div class="chartWrapper invisible">
+                <hr>
+                <p>Your estimated lifetime is: <span class="lifetime"></span>. Statistically you still have <span class="lifeLeft"></span>
+                    left. <br> Every box below is a week, black box is the past, light box is your future. Use it
+                    wisely.</p>
+                <div class="chart"></div>
+            </div>
         </div>
-        <hr>
-
         <footer>
-            <hr>
             Data: <a href="https://www.worldbank.org" target="_blank">World Bank</a> <br>
             Source code: <a href="https://github.com/ThorgalAegirsson/Procrastinator_motivator" target="_blank">Github</a><br>
             2018 &copy; Cudowny Radus
@@ -46,14 +45,16 @@
 
         <div class="modalWrapper">
             <div class="modal">
-                <h1><span class="error">ERROR</span> <span class="error">ERROR</span> <span class="error">ERROR</span> </h1>
-                <!-- blinking -->
-                Nature doesn't give a crap about your progressive first-world problems, you spoiled brat. From now on you are a
+                <h1><span class="error">ERROR</span> <span class="error">ERROR</span> <span class="error">ERROR</span>
+                </h1>
+                Nature doesn't give a crap about your progressive first-world problems, you spoiled brat. From now on
+                you are a
                 woman.
-            
+
                 <button>Ok, I'm a woman</button>
                 <br>
-                PS. If you are interested in this modern day bullshit you can check out an incomplete list of what "progressive"
+                PS. If you are interested in this modern day bullshit you can check out an incomplete list of what
+                "progressive"
                 gender encompasses - go <a href="https://ageofshitlords.com/list-of-all-tumblr-genders-so-far" target="_blank">HERE</a>
             </div>
         </div>

@@ -1,25 +1,51 @@
+
 body {
+    box-sizing: border-box;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 6rem;
+    min-height: 100vh;
     background: #0b3f5a;
     color: #63c367;
-    box-sizing: border-box;
+    padding-top: 20px;
 }
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
 a {
     color: #ffe000;
 }
-h1 {
+
+.wrapper h1 {
+    /* margin: 30px; */
     text-align: center;
+    padding-bottom: 15px;
 }
+
 fieldset {
     margin: 10px auto;
-    max-width: 500px;
+    width: 500px;
+    max-width: 90%;
     border-radius: 5px;
     border: 2px solid brown;
-    padding: 10px;
-    line-height: 1.5;
+    padding: 20px;
+    line-height: 2;
 }
 
 fieldset button {
     margin-top: 15px;
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    background: #186c6c;
+    color: #63c367
 }
 
 fieldset>legend {
@@ -29,25 +55,41 @@ fieldset>legend {
 fieldset>.inside {
     text-align: center;
 }
+
 .weekDiv {
     width: 10px;
     height: 10px;
     border: 1px solid black;
     background: #419b93;
 }
+
 .passed {
     background: black;
 }
 
 .chartWrapper {
     line-height: 1.4;
+    width: 90%;
+    margin: 0 auto 50px auto;
+}
+
+.chartWrapper p {
+    text-align: center;
+    margin: 40px auto;
 }
 
 .chartWrapper span {
     font-weight: 600;
     color: #8aff8e;
 }
+
+.chartWrapper hr {
+    /* width: 80%; */
+    margin: 30px auto;
+}
+
 .chart {
+    margin-top: 20px;
     border: 1px solid green;
     padding: 5px;
     display: grid;
@@ -58,8 +100,16 @@ fieldset>.inside {
 .invisible {
     display: none;
 }
+
 footer {
-    margin-top: 100px;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    padding: 1rem;
+    background-color: #0b2f42;
+    height: 5rem;
+    width: 100%;
+    /* margin-top: 100px; */
     text-align: center;
 }
 
