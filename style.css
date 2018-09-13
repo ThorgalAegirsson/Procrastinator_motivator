@@ -56,6 +56,17 @@ fieldset>.inside {
     text-align: center;
 }
 
+fieldset select {
+    background: transparent;
+    border: 1px solid black;
+    color: inherit;
+
+}
+
+fieldset option {
+    background: transparent;
+    color: black;
+}
 .weekDiv {
     width: 10px;
     height: 10px;
