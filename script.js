@@ -24,7 +24,19 @@
         }
 
     };
-
+    const openModal = (className, yearVal) => {
+        const modal = document.querySelector(`.${className}`);
+        modal.classList.add('show');
+        const modalBtn = document.querySelector('.modal button');
+        const calculateProgressive = (e) => {
+            e.preventDefault();
+            document.querySelector('.chartWrapper').classList.remove('invisible');
+            calculate(yearVal, 'woman');
+            modalBtn.removeEventListener('click', calculateProgressive);
+            modal.classList.remove('show');
+        }
+        modalBtn.addEventListener('click', calculateProgressive);
+    }
     const readData = (year, gender) => {
         console.log('readData started');
         //values
@@ -35,14 +47,15 @@
         console.log(yearVal);
         console.log(genderVal);
         if (genderVal === 'idiot') {
-            openModal('idiot');
-            return;
+            openModal('modalWrapper', yearVal);
+        } else {
+            calculate(yearVal, genderVal);
         }
-        calculate(yearVal, genderVal);
     };
 
     const calculate = (year, gender) => {
         console.log('fetch started');
+        console.log(`gender: ${gender}`);
         const output = document.querySelector('.output');
         const lifetime = document.querySelector('.lifetime');
         const lifeLeft = document.querySelector('.lifeLeft');
@@ -77,6 +90,8 @@
         const yearBox = document.querySelector('#year');
         const startBtn = document.querySelector('.submit');
         const gender = document.querySelector('#gender');
+        
+
         //populate website
         for (let i = 2016; i > 1959; i--){
             const option = document.createElement('option');
@@ -89,7 +104,6 @@
             e.preventDefault();
             document.querySelector('.chartWrapper').classList.remove('invisible');
             readData(year, gender);
-            
         });
     };
 

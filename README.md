@@ -7,10 +7,9 @@ Inspired by [this TEDTalk](https://www.youtube.com/watch?v=arj7oStGLkU).
 
 TODO:
 
-* hide modal
-* add event to modal button
 * options styling
 * footer to the bottom
+* modernize the looks
 
 
 
